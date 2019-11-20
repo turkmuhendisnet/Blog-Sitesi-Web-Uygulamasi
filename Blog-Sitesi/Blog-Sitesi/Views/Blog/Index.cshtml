@@ -4,12 +4,14 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Blog Listesi</h2>
+<hr />
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Yeni Blog Ekle", "Create",null,new {@class="btn btn-primary" })
 </p>
-<table class="table">
+<hr />
+<table class="table table-bordered table-hover table-striped" >
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Kategori.KategoriAdi)
@@ -17,15 +19,11 @@
         <th>
             @Html.DisplayNameFor(model => model.Baslik)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Aciklama)
-        </th>
+        
         <th>
             @Html.DisplayNameFor(model => model.Resim)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Icerik)
-        </th>
+        
         <th>
             @Html.DisplayNameFor(model => model.EklemeTarihi)
         </th>
@@ -35,7 +33,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Anasayfa)
         </th>
-        <th></th>
+        <th style="width:170px" >Düzenle</th>
     </tr>
 
 @foreach (var item in Model) {
@@ -46,28 +44,38 @@
         <td>
             @Html.DisplayFor(modelItem => item.Baslik)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Aciklama)
-        </td>
+        
         <td>
             @Html.DisplayFor(modelItem => item.Resim)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Icerik)
-        </td>
+        
         <td>
             @Html.DisplayFor(modelItem => item.EklemeTarihi)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Onay)
+            @if (item.Onay)
+            {
+                <label class="label label-success">Onaylı</label>
+            }
+            else
+            {
+                <label class="label label-danger">Onay Bekliyor</label>
+            }
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Anasayfa)
+            @if (item.Anasayfa)
+            {
+                <input type="checkbox" name="Anasayfa" checked disabled class="col-md-12" />
+            }
+            else
+            {
+                <input type="checkbox" name="Anasayfa" disabled class="col-md-12" />
+            }
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id },new {@class="btn btn-warning btn-xs" }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id },new { @class = "btn btn-primary btn-xs" }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id }, new { @class = "btn btn-danger btn-xs" })
         </td>
     </tr>
 }
