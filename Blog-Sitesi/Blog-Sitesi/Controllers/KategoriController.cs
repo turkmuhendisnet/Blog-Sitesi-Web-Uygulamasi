@@ -17,7 +17,18 @@ namespace Blog_Sitesi.Controllers
         // GET: Kategori
         public ActionResult Index()
         {
-            return View(db.Kategoriler.ToList());
+          var kategoriler = db.Kategoriler.
+                Select(i =>
+                new KategoriModel()
+                {
+                    Id=i.Id,
+                    KategoriAdi = i.KategoriAdi,
+                    BlogSayisi = i.Bloglar.Count()
+
+
+                });
+
+            return View(kategoriler.ToList());
         }
 
         // GET: Kategori/Details/5

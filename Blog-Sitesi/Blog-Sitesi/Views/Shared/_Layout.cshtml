@@ -5,40 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Blog Sitesi</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    @*<link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />*@
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/assets/css/Footer-with-social-icons.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/assets/css/Header-Icons.css">
+
+
+
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar  navbar-fixed-top" style="background-color:#182C61;">
         <div class="container">
+            @Html.ActionLink("Blog Sitesi İsmi", "Index", "Home", new { area = "" }, new { @class = "navbar-brand text-danger" })
+        </div>
+    </div>
+    <nav class="navbar navbar-default " id="colorful-nav">
+        <div class="container" >
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
+                    <li class="home"><a href="#"><span class="glyphicon glyphicon-home"></span><h5>Anasayfa</h5></a></li>
+                    <li class="profile"><a href="#"><span class="glyphicon glyphicon-edit"></span><h5>Bloglar</h5></a></li>
+                    <li class="statistics"><a href="#"><span class="glyphicon glyphicon-stats"></span><h5>İstatistikler</h5></a></li>
+                    <li class="lists"><a href="#"><span class="glyphicon glyphicon-list-alt"></span><h5>Kategoriler</h5></a></li>
+                    <li class="about"><a href="#"><span class="glyphicon glyphicon-info-sign"></span><h5>Hakkında</h5></a></li>
+                    <li class="contact"><a href="#"><span class="glyphicon glyphicon-envelope"></span><h5>İletişim</h5></a></li>
+                    <li class="search"><a href="#"><span class="glyphicon glyphicon-search"></span><h5>Ara</h5></a></li>
                 </ul>
             </div>
         </div>
-    </div>
+    </nav>
+
+    @*<div class="navbar navbar-default navbar-fixed-top" style="background-color:#182C61">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Blog Sitesi İsmi", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                    </ul>
+                </div>
+            </div>
+        </div>*@
 
     <div class="container body-content">
-        <div class="row">
-            <div class="col-md-12 "></div>
-
-        </div>
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+        <div class="row" style="margin-top:10%">
+                @RenderBody()
+                <hr />        
+        </div>      
     </div>
+    
+    <footer id="myFooter">
+        
+        <div class="social-networks">
+            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="facebook"><i class="fa fa-facebook-official"></i></a>
+            <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+            <a href="#" class="twitch"><i class="fa fa-twitch "></i></a>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2019 turkmuhendis.net Web Page</p>
+        </div>
+    </footer>
 
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    
+    
+    @*<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>*@
+
 </body>
 </html>
