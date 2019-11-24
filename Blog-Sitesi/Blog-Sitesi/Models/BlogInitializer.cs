@@ -30,9 +30,11 @@ namespace Blog_Sitesi.Models
 
                 new Blog{Baslik="MVC nedir?",Aciklama="MVC tanımı",EklemeTarihi=DateTime.Now.AddDays(-20),Anasayfa=true,Onay=false,Icerik="MVC model,view ve controller dosylarından oluşan projedir.",Resim="2.jpg",KategoriId=2},
 
-                new Blog{Baslik="WebForms",Aciklama="WebForms nedir?",EklemeTarihi=DateTime.Now.AddDays(-15),Anasayfa=false,Icerik="WebForms Microsoft tarafından gelştirilen eski mimarierden olan bir web yazılım teklonojisidir.",Resim="3.jpg",KategoriId=3},
+                new Blog{Baslik="WebForms",Aciklama="WebForms nedir?",EklemeTarihi=DateTime.Now.AddDays(-15),Anasayfa=true, Onay=true,Icerik="WebForms Microsoft tarafından gelştirilen eski mimarierden olan bir web yazılım teklonojisidir.",Resim="3.jpg",KategoriId=3},
 
-                new Blog{Baslik="Structures",Aciklama="Yapıların c programlamada kullanılması",EklemeTarihi=DateTime.Now.AddDays(-12),Anasayfa=true,Onay=false,Icerik="Yapıların tanımlanmaıs classlara benzer fakat farklılıklar göstere bilirler",Resim="4.jpg",KategoriId=4}
+                new Blog{Baslik="Structures",Aciklama="Yapıların c programlamada kullanılması",EklemeTarihi=DateTime.Now.AddDays(-12),Anasayfa=true,Onay=false,Icerik="Yapıların tanımlanmaıs classlara benzer fakat farklılıklar göstere bilirler",Resim="4.jpg",KategoriId=4},
+
+                new Blog{Baslik="Pointer",Aciklama="Pointerların c programlamada kullanılması",EklemeTarihi=DateTime.Now.AddDays(-12),Anasayfa=true,Onay=true ,Icerik="Pointerlar ramde verinin tututuğu adresi gösteren göstericilerdir.",Resim="7.jpg",KategoriId=4}
 
             };
 

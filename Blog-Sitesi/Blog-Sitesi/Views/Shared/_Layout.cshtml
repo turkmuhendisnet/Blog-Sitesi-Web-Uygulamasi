@@ -20,10 +20,10 @@
 <body>
     <div class="navbar  navbar-fixed-top" style="background-color:#182C61;">
         <div class="container">
-            @Html.ActionLink("Blog Sitesi İsmi", "Index", "Home", new { area = "" }, new { @class = "navbar-brand text-danger" })
+            @Html.ActionLink("Blog Sitesi İsmi", "Index", "Home", new { area = "" }, new { @class = "navbar-brand text-white" })
         </div>
     </div>
-    <nav class="navbar navbar-default " id="colorful-nav">
+    <nav class="navbar navbar-default " id="colorful-nav"style="z-index:2">
         <div class="container" >
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -32,7 +32,7 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
+            <div class="collapse navbar-collapse" id="myNavbar" >
                 <ul class="nav navbar-nav">
                     <li class="home"><a href="#"><span class="glyphicon glyphicon-home"></span><h5>Anasayfa</h5></a></li>
                     <li class="profile"><a href="#"><span class="glyphicon glyphicon-edit"></span><h5>Bloglar</h5></a></li>
@@ -45,23 +45,6 @@
             </div>
         </div>
     </nav>
-
-    @*<div class="navbar navbar-default navbar-fixed-top" style="background-color:#182C61">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    @Html.ActionLink("Blog Sitesi İsmi", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                    </ul>
-                </div>
-            </div>
-        </div>*@
 
     <div class="container body-content">
         <div class="row" style="margin-top:10%">

@@ -93,6 +93,7 @@
   <ItemGroup>
     <Content Include="Content\assets\css\Footer-with-social-icons.css" />
     <Content Include="Content\assets\css\Header-Icons.css" />
+    <Content Include="Content\assets\css\KategorilerSidebar.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -123,6 +124,7 @@
     <Compile Include="Models\Blog.cs" />
     <Compile Include="Models\BlogContext.cs" />
     <Compile Include="Models\BlogInitializer.cs" />
+    <Compile Include="Models\BlogModel.cs" />
     <Compile Include="Models\Kategori.cs" />
     <Compile Include="Models\KategoriModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -144,6 +146,8 @@
     <Content Include="Views\Blog\Details.cshtml" />
     <Content Include="Views\Blog\Edit.cshtml" />
     <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Shared\_KategoilerSidebar.cshtml" />
+    <Content Include="Views\Shared\_SearchBar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

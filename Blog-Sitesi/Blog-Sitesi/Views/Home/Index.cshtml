@@ -1,13 +1,36 @@
-﻿@model IEnumerable<Blog_Sitesi.Models.Blog>
+﻿@model IEnumerable<Blog_Sitesi.Models.BlogModel>
 
 
 @{
     ViewBag.Title = "Anasayfa";
 }
 
-<h2>Index</h2>
+<h2>Blog Listesi</h2>
 
-@foreach ( var Bloglar in Model)
-{
-    <p>@Bloglar.Baslik</p>
-}
+<div class="row">
+    <div class="col-md-8">
+        @foreach (var Blog in Model)
+        {
+        <div class="blog">
+            <h3 class="page-header">
+                @Blog.Baslik
+            </h3>
+
+            <img class="img-responsive" src="https://place-hold.it/900x300" alt="Alternate Text" />
+            <p class="text-right">
+                <span class="fa fa-clock-o"></span>
+                @Blog.EklemeTarihi
+            </p>
+            <p> @Blog.Aciklama</p>
+
+            <button class="btn btn-primary">Daha falza...</button>
+        </div>
+        }
+    </div>
+    <div class="col-md-4">
+        @Html.Partial("_SearchBar")
+        @Html.Partial("_KategoilerSidebar")
+    </div>
+</div>
+
+

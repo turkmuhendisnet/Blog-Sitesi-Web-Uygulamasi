@@ -1,0 +1,32 @@
+﻿.sidebar-widget-1 .list-group-item {
+    padding: 15px;
+}
+
+.list-group-hover .list-group-item:hover {
+    background-color: #febf00;
+    color: #fff;
+    transition: all 0.5s ease-out;
+}
+
+.sidebar-widget-1 i {
+    margin-right: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.list-group-item.bg-active {
+    background: #febf00;
+    color: #fff;
+}
+
+* {
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+}
+
+body {
+    font-family: 'Roboto';
+    font-size: 16px;
+    letter-spacing: .5px;
+}
