@@ -3,28 +3,36 @@
 @{
     ViewBag.Title = "Index";
 }
-    <div class="navbar navbar-default">
-        <h2 style="text-align:center; margin-bottom:25px">Blog Listesi</h2>
+<div class="navbar navbar-default">
+    <h2 style="text-align:center; margin-bottom:25px">Blog Listesi</h2>
+</div>
+<p style="margin-top:10px;">
+    @Html.ActionLink("Yeni Blog Ekle", "Create", null, new { @class = "btn btn-primary" })
+</p>
+
+@if (TempData["Blog"] != null)
+{
+    var blog = (Blog_Sitesi.Models.Blog)TempData["Blog"];
+
+    <div class="alert alert-success" role="alert">
+        <strong><span class="fa fa-check "></span> @blog.Baslik</strong> 
+        <p class="text-center">Kayıt Edildi.</p>
     </div>
 
-
-<p style="margin-top:10px;">
-    @Html.ActionLink("Yeni Blog Ekle", "Create",null,new {@class="btn btn-primary" })
-</p>
-<hr />
-<table class="table table-bordered table-hover table-striped" >
+}
+<table class="table table-bordered table-hover table-striped">
     <tr>
-        <th class="col-lg-2 col-md-2" >
+        <th class="col-lg-2 col-md-2">
             @Html.DisplayNameFor(model => model.Kategori.KategoriAdi)
         </th>
         <th class="col-lg-2 col-md-2">
             @Html.DisplayNameFor(model => model.Baslik)
         </th>
-        
+
         <th class="col-lg-1 col-md-1">
             @Html.DisplayNameFor(model => model.Resim)
         </th>
-        
+
         <th class="col-lg-2 col-md-2">
             @Html.DisplayNameFor(model => model.EklemeTarihi)
         </th>
@@ -34,51 +42,52 @@
         <th class="text-center col-lg-1 ">
             @Html.DisplayNameFor(model => model.Anasayfa)
         </th>
-        <th  class="text-center col-lg-2 col-md-4 col-sm-4 col-xs-4">Araçlar</th>
+        <th class="text-center col-lg-2 col-md-4 col-sm-4 col-xs-4">Araçlar</th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Kategori.KategoriAdi)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Baslik)
-        </td>
-        
-        <td>
-            @Html.DisplayFor(modelItem => item.Resim)
-        </td>
-        
-        <td>
-            @Html.DisplayFor(modelItem => item.EklemeTarihi)
-        </td>
-        <td class="text-center">
-            @if (item.Onay)
-            {
-                <label class="text-info">Onaylı</label>
-            }
-            else
-            {
-                <label class="text-danger">Onay Bekliyor</label>
-            }
-        </td>
-        <td class="text-center">
-            @if (item.Anasayfa)
-            {
-                <input type="checkbox" name="Anasayfa" checked disabled />
-            }
-            else
-            {
-                <input type="checkbox" name="Anasayfa" disabled  />               
-            }
-        </td>
-        <td class="text-center">
-            @Html.ActionLink("Düzenle", "Edit", new { id=item.Id },new {@class="btn btn-warning btn-xs" }) |
-            @Html.ActionLink("Detay", "Details", new { id=item.Id },new { @class = "btn btn-primary btn-xs" }) |
-            @Html.ActionLink("Sil", "Delete", new { id=item.Id }, new { @class = "btn btn-danger btn-xs" })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kategori.KategoriAdi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Baslik)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Resim)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.EklemeTarihi)
+            </td>
+            <td class="text-center">
+                @if (item.Onay)
+                {
+                    <label class="text-info">Onaylı</label>
+                }
+                else
+                {
+                    <label class="text-danger">Onay Bekliyor</label>
+                }
+            </td>
+            <td class="text-center">
+                @if (item.Anasayfa)
+                {
+                    <input type="checkbox" name="Anasayfa" checked disabled />
+                }
+                else
+                {
+                    <input type="checkbox" name="Anasayfa" disabled />
+                }
+            </td>
+            <td class="text-center">
+                @Html.ActionLink("Düzenle", "Edit", new { id = item.Id }, new { @class = "btn btn-warning btn-xs" }) |
+                @Html.ActionLink("Detay", "Details", new { id = item.Id }, new { @class = "btn btn-primary btn-xs" }) |
+                @Html.ActionLink("Sil", "Delete", new { id = item.Id }, new { @class = "btn btn-danger btn-xs" })
+            </td>
+        </tr>
+    }
 
 </table>

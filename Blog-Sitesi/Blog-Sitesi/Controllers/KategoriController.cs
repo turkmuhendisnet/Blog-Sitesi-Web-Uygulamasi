@@ -89,7 +89,7 @@ namespace Blog_Sitesi.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,KategoriAdi")] Kategori kategori)
+        public ActionResult Edit([Bind(Include = "KategoriAdi")] Kategori kategori)
         {
             if (ModelState.IsValid)
             {
