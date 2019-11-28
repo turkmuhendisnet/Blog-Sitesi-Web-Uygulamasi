@@ -16,7 +16,7 @@
 
     <div class="alert alert-success" role="alert">
         <strong><span class="fa fa-check "></span> @blog.Baslik</strong> 
-        <p class="text-center">Kayıt Edildi.</p>
+        <p style="margin-left:15px">Kayıt Edildi.</p>
     </div>
 
 }
@@ -83,8 +83,7 @@
                 }
             </td>
             <td class="text-center">
-                @Html.ActionLink("Düzenle", "Edit", new { id = item.Id }, new { @class = "btn btn-warning btn-xs" }) |
-                @Html.ActionLink("Detay", "Details", new { id = item.Id }, new { @class = "btn btn-primary btn-xs" }) |
+                @Html.ActionLink("Düzenle", "Edit", new { id = item.Id }, new { @class = "btn btn-warning btn-xs" }) |                
                 @Html.ActionLink("Sil", "Delete", new { id = item.Id }, new { @class = "btn btn-danger btn-xs" })
             </td>
         </tr>

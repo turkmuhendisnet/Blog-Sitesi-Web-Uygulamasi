@@ -4,80 +4,32 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>Blog</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Kategori.KategoriAdi)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Kategori.KategoriAdi)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Baslik)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Baslik)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Aciklama)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Aciklama)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Resim)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Resim)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Icerik)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Icerik)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.EklemeTarihi)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.EklemeTarihi)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Onay)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Onay)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Anasayfa)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Anasayfa)
-        </dd>
-
-    </dl>
+<div class="navbar navbar-default">
+    <h1 style="text-align:center; margin-bottom:25px">Detay - @Model.Baslik </h1>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    <i class="fa fa-backward text-primary">&nbsp;</i>
-    @Html.ActionLink("Listeye Dön", "Index")
-</p>
+<div class="row">
+    <div class="col-md-8">
+        <img class="img-responsive" src="https://place-hold.it/900x300" alt="Alternate Text" />
+        <p class="text-right">
+            <span class="fa fa-clock-o"></span>
+            @Model.EklemeTarihi
+        </p>
+        <blockquote>
+            <p>@Model.Aciklama</p>
+        </blockquote>
+        <p>
+            @Model.Icerik
+        </p>
+        <p>
+            <i class="fa fa-backward text-primary">&nbsp;</i>
+            @Html.ActionLink("Listeye Dön", "Index")
+        </p>
+        @Html.Partial("_Comment")
+    </div>
+    <div class="col-md-4" >
+        @Html.Partial("_SearchBar")
+        @Html.Partial("_KategoilerSidebar")
+    </div>
+</div>
+

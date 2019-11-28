@@ -13,8 +13,8 @@
     <div class="col-md-8">
         @foreach (var Blog in Model)
         {
-        <div class="blog">
-            <h3 class="page-header">
+        <div class="blog" >
+            <h3 class="page-header" style="display:block" >
                 @Blog.Baslik
             </h3>
 
@@ -25,13 +25,12 @@
             </p>
             <p> @Blog.Aciklama</p>
 
-            <button class="btn btn-primary">Daha falza...</button>
-        </div>
+            @Html.ActionLink("Daha Fazla...", "Details", "Blog", new {Blog.Id }, new {@class= "btn btn-primary" })
+        </div> 
         }
     </div>
     <div class="col-md-4" style="margin-top:95px">
         @Html.Partial("_SearchBar")
-        @Html.Partial("_KategoilerSidebar")
         @Html.Partial("_KategoilerSidebar")
 
     </div>

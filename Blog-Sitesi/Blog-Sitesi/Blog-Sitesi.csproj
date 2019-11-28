@@ -91,6 +91,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\assets\css\Comment.css" />
     <Content Include="Content\assets\css\Footer-with-social-icons.css" />
     <Content Include="Content\assets\css\Header-Icons.css" />
     <Content Include="Content\assets\css\KategorilerSidebar.css" />
@@ -148,6 +149,7 @@
     <Content Include="Views\Blog\Index.cshtml" />
     <Content Include="Views\Shared\_KategoilerSidebar.cshtml" />
     <Content Include="Views\Shared\_SearchBar.cshtml" />
+    <Content Include="Views\Shared\_Comment.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
