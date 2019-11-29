@@ -15,6 +15,7 @@ namespace Blog_Sitesi.Controllers
         public ActionResult Index()
         {
             var bloglar = dbContext.Bloglar
+                                         .Where(i => i.Onay == true && i.Anasayfa == true)
                                             .Select(i=> new BlogModel()
                                             {
                                                 Id=i.Id,

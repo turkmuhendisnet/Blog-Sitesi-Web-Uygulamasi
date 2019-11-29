@@ -14,6 +14,12 @@ namespace Blog_Sitesi.Controllers
     {
         private BlogContext db = new BlogContext();
 
+        public PartialViewResult KategoriListesi ()
+        {
+
+            return PartialView(db.Kategoriler.ToList());
+        }
+
         // GET: Kategori
         public ActionResult Index()
         {

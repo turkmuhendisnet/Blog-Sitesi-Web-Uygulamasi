@@ -14,10 +14,34 @@ namespace Blog_Sitesi.Controllers
     {
         private BlogContext db = new BlogContext();
 
+        public ActionResult List(int? id)
+        {
+            var bloglar = db.Bloglar.Where(i => i.Onay == true )
+                                            .Select(i => new BlogModel()
+                                            {
+                                                Id = i.Id,
+                                                Baslik = i.Baslik.Length > 100 ? i.Baslik.Substring(0, 100) + "..." : i.Baslik,
+                                                Aciklama = i.Aciklama,
+                                                EklemeTarihi = i.EklemeTarihi,
+                                                Anasayfa = i.Anasayfa,
+                                                Onay = i.Onay,
+                                                Resim = i.Resim,
+                                                KategoriyId=i.KategoriId
+
+                                            }).AsQueryable();
+            if (id!=null)
+            {
+                bloglar = bloglar.Where(i => i.KategoriyId == id);
+            }                                
+
+            return View(bloglar.ToList());
+        }
+
+
         // GET: Blog
         public ActionResult Index()
         {
-            var bloglar = db.Bloglar.Include(b => b.Kategori).OrderBy(i=>i.EklemeTarihi);
+            var bloglar = db.Bloglar.Include(b => b.Kategori).OrderByDescending(i=>i.EklemeTarihi);
             return View(bloglar.ToList());
         }
 

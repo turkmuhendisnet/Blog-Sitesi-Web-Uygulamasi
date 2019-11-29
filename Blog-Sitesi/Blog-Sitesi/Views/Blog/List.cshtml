@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Blog_Sitesi.Models.BlogModel>
+
+
+@{
+    ViewBag.Title = "Blog Listesi";
+}
+
+<div class="navbar navbar-default">
+    <h2 style="text-align:center; margin-bottom:25px">Blog Listesi</h2>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        @foreach (var Blog in Model)
+        {
+            <div class="blog">
+                <h3 class="page-header" style="display:block">
+                    @Blog.Baslik
+                </h3>
+
+                <img class="img-responsive" src="https://place-hold.it/900x300" alt="Alternate Text" />
+                <p class="text-right">
+                    <span class="fa fa-clock-o"></span>
+                    @Blog.EklemeTarihi
+                </p>
+                <p> @Blog.Aciklama</p>
+
+                @Html.ActionLink("Daha Fazla...", "Details", "Blog", new { Blog.Id }, new { @class = "btn btn-primary" })
+            </div>
+        }
+    </div>
+    <div class="col-md-4" style="margin-top:95px">
+        @Html.Partial("_SearchBar")
+        @{Html.RenderAction("KategoriListesi", "Kategori");};
+
+    </div>
+</div>
+
+

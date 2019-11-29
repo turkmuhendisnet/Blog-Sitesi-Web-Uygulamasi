@@ -27,9 +27,9 @@
         </p>
         @Html.Partial("_Comment")
     </div>
-    <div class="col-md-4" >
+    <div class="col-md-4">
         @Html.Partial("_SearchBar")
-        @Html.Partial("_KategoilerSidebar")
+        @{Html.RenderAction("KategoriListesi", "Kategori");};
     </div>
 </div>
 

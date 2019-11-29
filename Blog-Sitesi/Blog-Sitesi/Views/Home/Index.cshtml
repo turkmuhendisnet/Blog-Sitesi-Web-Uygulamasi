@@ -25,13 +25,13 @@
             </p>
             <p> @Blog.Aciklama</p>
 
-            @Html.ActionLink("Daha Fazla...", "Details", "Blog", new {Blog.Id }, new {@class= "btn btn-primary" })
+            @Html.ActionLink("Daha Fazla...", "Details", "Blog", new { Blog.Id }, new { @class = "btn btn-primary" })
         </div> 
         }
     </div>
     <div class="col-md-4" style="margin-top:95px">
         @Html.Partial("_SearchBar")
-        @Html.Partial("_KategoilerSidebar")
+        @{Html.RenderAction("KategoriListesi", "Kategori");};
 
     </div>
 </div>

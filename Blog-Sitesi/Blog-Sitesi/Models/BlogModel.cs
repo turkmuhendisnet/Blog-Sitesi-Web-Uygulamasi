@@ -16,5 +16,7 @@ namespace Blog_Sitesi.Models
         public bool Onay { get; set; }
         public bool Anasayfa { get; set; }
 
+        public int KategoriyId { get; set; }
+
     }
 }
