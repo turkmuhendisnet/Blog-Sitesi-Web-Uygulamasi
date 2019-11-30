@@ -151,6 +151,7 @@
     <Content Include="Views\Shared\_Comment.cshtml" />
     <Content Include="Views\Kategori\KategoriListesi.cshtml" />
     <Content Include="Views\Blog\List.cshtml" />
+    <Content Include="Views\Shared\_BlogListesi.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

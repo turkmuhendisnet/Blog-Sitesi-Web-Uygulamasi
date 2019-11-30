@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Blog_Sitesi.Models.BlogModel>
+@if (Model.Count() == 0)
+{
+    <h3 class="page-header" style="display:block">
+        İlgili Blog
+    </h3>
+    <div class="alert alert-warning">
+
+        <p>Kayıt Bulunamadı...</p>
+    </div>
+}
+else
+{
+
+
+    foreach (var Blog in Model)
+    {
+        <div class="blog">
+            <h3 class="page-header" style="display:block">
+                @Blog.Baslik
+            </h3>
+
+            <img class="img-responsive" src="https://place-hold.it/900x300" alt="Alternate Text" />
+            <p class="text-right">
+                <span class="fa fa-clock-o"></span>
+                @Blog.EklemeTarihi
+            </p>
+            <p> @Blog.Aciklama</p>
+
+            @Html.ActionLink("Daha Fazla...", "Details", "Blog", new { Blog.Id }, new { @class = "btn btn-primary" })
+        </div>
+    }
+}
