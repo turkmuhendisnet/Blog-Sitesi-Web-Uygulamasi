@@ -14,7 +14,7 @@ namespace Blog_Sitesi.Controllers
     {
         private BlogContext db = new BlogContext();
 
-        public ActionResult List(int? id)
+        public ActionResult List(int? id,string kategori)
         {
             var bloglar = db.Bloglar.Where(i => i.Onay == true )
                                             .Select(i => new BlogModel()
@@ -29,6 +29,11 @@ namespace Blog_Sitesi.Controllers
                                                 KategoriyId=i.KategoriId
 
                                             }).AsQueryable();
+            if (string.IsNullOrEmpty("kategori")==false)
+            {
+                bloglar = bloglar.Where(i => i.Baslik.Contains(kategori) || i.Aciklama.Contains(kategori));
+            }
+
             if (id!=null)
             {
                 bloglar = bloglar.Where(i => i.KategoriyId == id);
