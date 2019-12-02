@@ -1,13 +1,15 @@
-﻿@model IEnumerable<Blog_Sitesi.Models.BlogModel>
+﻿@using Blog_Sitesi.Content
+@model IEnumerable<Blog_Sitesi.Models.BlogModel>
 
 
 @{
     ViewBag.Title = "Anasayfa";
 }
 
-<div class="navbar navbar-default">
+@*<div class="navbar alert-info">
     <h2 style="text-align:center; margin-bottom:25px">Anasayfa</h2>
-</div>
+</div>*@
+@Html.Baslik("navbar alert-info", "text-align:center; margin-bottom:25px", "Anasayfa")
 
 <div class="row">
     <div class="col-md-8">

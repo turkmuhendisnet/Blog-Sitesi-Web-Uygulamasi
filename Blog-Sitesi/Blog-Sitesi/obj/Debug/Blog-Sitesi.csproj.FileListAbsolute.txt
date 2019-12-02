@@ -14,7 +14,6 @@ C:\Users\Ali ÇAKIR\Desktop\Yeni Çalışma\Blog-Sitesi-Web-Uygulamasi\Blog-Site
 C:\Users\Ali ÇAKIR\Desktop\Yeni Çalışma\Blog-Sitesi-Web-Uygulamasi\Blog-Sitesi\Blog-Sitesi\bin\System.Web.Webpages.Razor.xml
 C:\Users\Ali ÇAKIR\Desktop\Yeni Çalışma\Blog-Sitesi-Web-Uygulamasi\Blog-Sitesi\Blog-Sitesi\bin\System.Web.Helpers.xml
 C:\Users\Ali ÇAKIR\Desktop\Yeni Çalışma\Blog-Sitesi-Web-Uygulamasi\Blog-Sitesi\Blog-Sitesi\bin\System.Web.Mvc.xml
-C:\Users\Ali ÇAKIR\Desktop\Yeni Çalışma\Blog-Sitesi-Web-Uygulamasi\Blog-Sitesi\Blog-Sitesi\obj\Debug\Blog-Sitesi.csprojAssemblyReference.cache
 C:\Users\Ali ÇAKIR\Desktop\Yeni Çalışma\Blog-Sitesi-Web-Uygulamasi\Blog-Sitesi\Blog-Sitesi\obj\Debug\Blog-Sitesi.csproj.CoreCompileInputs.cache
 C:\Users\Ali ÇAKIR\Desktop\Yeni Çalışma\Blog-Sitesi-Web-Uygulamasi\Blog-Sitesi\Blog-Sitesi\obj\Debug\Blog-Sitesi.csproj.CopyComplete
 C:\Users\Ali ÇAKIR\Desktop\Yeni Çalışma\Blog-Sitesi-Web-Uygulamasi\Blog-Sitesi\Blog-Sitesi\obj\Debug\Blog-Sitesi.dll
@@ -23,3 +22,4 @@ C:\Users\Ali ÇAKIR\Desktop\Yeni Çalışma\Blog-Sitesi-Web-Uygulamasi\Blog-Site
 C:\Users\Ali ÇAKIR\Desktop\Yeni Çalışma\Blog-Sitesi-Web-Uygulamasi\Blog-Sitesi\Blog-Sitesi\bin\EntityFramework.SqlServer.dll
 C:\Users\Ali ÇAKIR\Desktop\Yeni Çalışma\Blog-Sitesi-Web-Uygulamasi\Blog-Sitesi\Blog-Sitesi\bin\EntityFramework.xml
 C:\Users\Ali ÇAKIR\Desktop\Yeni Çalışma\Blog-Sitesi-Web-Uygulamasi\Blog-Sitesi\Blog-Sitesi\bin\EntityFramework.SqlServer.xml
+C:\Users\Ali ÇAKIR\Desktop\Yeni Çalışma\Blog-Sitesi-Web-Uygulamasi\Blog-Sitesi\Blog-Sitesi\obj\Debug\Blog-Sitesi.csprojAssemblyReference.cache
