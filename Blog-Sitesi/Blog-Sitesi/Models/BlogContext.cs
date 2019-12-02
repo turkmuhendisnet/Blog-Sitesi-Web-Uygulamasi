@@ -17,6 +17,7 @@ namespace Blog_Sitesi.Models
         // tablo isimleri
         public DbSet<Blog> Bloglar { get; set; }
         public DbSet<Kategori> Kategoriler { get; set; }
+        public DbSet<Yorum> Yorumlar { get; set; }
 
     }
 }

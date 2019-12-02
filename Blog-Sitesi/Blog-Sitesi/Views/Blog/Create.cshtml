@@ -1,13 +1,11 @@
-﻿@model Blog_Sitesi.Models.Blog
+﻿@using Blog_Sitesi.Content
+@model Blog_Sitesi.Models.Blog
 
 @{
     ViewBag.Title = "Create";
 }
 
-<div class="navbar navbar-default">
-    <h2 style="text-align:center; margin-bottom:25px">Blog Ekle</h2>
-</div>
-
+@Html.Baslik("navbar alert-info", "text-align:center; margin-bottom:25px", "Blog Ekle")
 
 @using (Html.BeginForm())
 {
@@ -58,7 +56,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Kaydet" class="btn btn-default" />
             </div>
         </div>
     </div>

@@ -43,6 +43,17 @@ namespace Blog_Sitesi.Models
 
             context.SaveChanges();
 
+            List<Yorum> Yorumlar = new List<Yorum>(){
+
+                new Yorum{Ad="Ali",Soyad="Çakır",YorumTarihi=DateTime.Now.Date,BlogId=1,Mesaj="Yazıyı Beğendim"},
+                new Yorum{Ad="Samet",Soyad="Aybaba",YorumTarihi=DateTime.Now.Date,BlogId=2,Mesaj="Güzel  yaılmış"}
+
+            };
+            foreach (var yorum in Yorumlar)
+                context.Yorumlar.Add(yorum);
+
+            context.SaveChanges();
+
             base.Seed(context);
 
         }

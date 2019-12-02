@@ -14,6 +14,16 @@ namespace Blog_Sitesi.Controllers
     {
         private BlogContext db = new BlogContext();
 
+
+        //BURAYA DÖNECEĞİZ
+       //public PartialViewResult YorumlarListesi(int id)
+       // {
+       //     var yorumlar = db.Yorumlar.Where(i => i.BlogId == id).ToList();
+
+       //     return PartialView(yorumlar.ToList());
+       // }
+
+
         public ActionResult List(int? id,string kategori)
         {
             var bloglar = db.Bloglar.Where(i => i.Onay == true )
@@ -29,7 +39,8 @@ namespace Blog_Sitesi.Controllers
                                                 KategoriyId=i.KategoriId
 
                                             }).AsQueryable();
-            if (string.IsNullOrEmpty("kategori")==false)
+
+            if (kategori != null)
             {
                 bloglar = bloglar.Where(i => i.Baslik.Contains(kategori) || i.Aciklama.Contains(kategori));
             }

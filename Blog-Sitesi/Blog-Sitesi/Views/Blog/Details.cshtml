@@ -1,13 +1,12 @@
 ﻿@model Blog_Sitesi.Models.Blog
+@using Blog_Sitesi.Content
 
 @{
     ViewBag.Title = "Details";
 }
 
+@Html.Baslik("navbar alert-info", "text-align:center; margin-bottom:25px",Model.Baslik)
 
-<div class="navbar navbar-default">
-    <h1 style="text-align:center; margin-bottom:25px">Detay - @Model.Baslik </h1>
-</div>
 <div class="row">
     <div class="col-md-8">
         <img class="img-responsive" src="https://place-hold.it/900x300" alt="Alternate Text" />

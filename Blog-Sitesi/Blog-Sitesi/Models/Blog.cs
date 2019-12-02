@@ -21,6 +21,8 @@ namespace Blog_Sitesi.Models
         //ForenKey
         public Kategori Kategori { get; set; }
 
+        public List<Yorum> Yorumlar { get; set; }
+
 
 
     }
