@@ -69,11 +69,15 @@ namespace Blog_Sitesi.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Blog blog = db.Bloglar.Find(id);
+
+            var yorumlar = db.Yorumlar.Where(i => i.Id == id).ToList();
+
+            ViewBag.bloglar =blog;
             if (blog == null)
             {
                 return HttpNotFound();
             }
-            return View(blog);
+            return View(yorumlar);
         }
 
         // GET: Blog/Create

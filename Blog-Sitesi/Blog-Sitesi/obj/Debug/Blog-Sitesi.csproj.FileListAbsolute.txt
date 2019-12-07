@@ -22,3 +22,4 @@ C:\Users\Ali ÇAKIR\Desktop\Yeni Çalışma\Blog-Sitesi-Web-Uygulamasi\Blog-Site
 C:\Users\Ali ÇAKIR\Desktop\Yeni Çalışma\Blog-Sitesi-Web-Uygulamasi\Blog-Sitesi\Blog-Sitesi\bin\EntityFramework.SqlServer.dll
 C:\Users\Ali ÇAKIR\Desktop\Yeni Çalışma\Blog-Sitesi-Web-Uygulamasi\Blog-Sitesi\Blog-Sitesi\bin\EntityFramework.xml
 C:\Users\Ali ÇAKIR\Desktop\Yeni Çalışma\Blog-Sitesi-Web-Uygulamasi\Blog-Sitesi\Blog-Sitesi\bin\EntityFramework.SqlServer.xml
+C:\Users\Ali ÇAKIR\Desktop\Yeni Çalışma\Blog-Sitesi-Web-Uygulamasi\Blog-Sitesi\Blog-Sitesi\obj\Debug\Blog-Sitesi.csprojAssemblyReference.cache

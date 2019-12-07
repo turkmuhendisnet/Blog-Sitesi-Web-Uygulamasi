@@ -1,34 +1,42 @@
-﻿@model Blog_Sitesi.Models.Blog
+﻿@model IEnumerable<Blog_Sitesi.Models.Yorum>
+
 @using Blog_Sitesi.Content
+@using Blog_Sitesi.Models
 
 @{
     ViewBag.Title = "Details";
 }
 
-@Html.Baslik("navbar alert-info", "text-align:center; margin-bottom:25px",Model.Baslik)
+@{
+    var data=(Blog)ViewBag.bloglar;
+ }
+
+@Html.Baslik("navbar alert-info", "text-align:center; margin-bottom:25px",data.Baslik)
 
 <div class="row">
     <div class="col-md-8">
         <img class="img-responsive" src="https://place-hold.it/900x300" alt="Alternate Text" />
         <p class="text-right">
             <span class="fa fa-clock-o"></span>
-            @Model.EklemeTarihi
+            @data.EklemeTarihi
         </p>
         <blockquote>
-            <p>@Model.Aciklama</p>
+            <p>@data.Aciklama</p>
         </blockquote>
         <p>
-            @Model.Icerik
+            @data.Icerik
         </p>
         <p>
             <i class="fa fa-backward text-primary">&nbsp;</i>
             @Html.ActionLink("Listeye Dön", "Index")
         </p>
-        @Html.Partial("_Comment")
+        @* Aşağıda bulunan partialview e blog controller içerisindeki detailsden bir model gönderilecek Details kontrolünden details viewvine bir temtdata birde model view gönderilecek bu sayede gelen temmt datada blog bilgileri olacak ve detailste yazdırlacak gelen model de ise orumlar olacak ve Commet partial viewvinde yazdırlacak  *@
+        @Html.Partial("_Comment", Model)
     </div>
     <div class="col-md-4">
         @Html.Partial("_SearchBar")
         @{Html.RenderAction("KategoriListesi", "Kategori");};
     </div>
 </div>
+
 
