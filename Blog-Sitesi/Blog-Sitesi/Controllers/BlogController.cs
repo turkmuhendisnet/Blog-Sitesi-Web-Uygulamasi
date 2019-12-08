@@ -14,16 +14,6 @@ namespace Blog_Sitesi.Controllers
     {
         private BlogContext db = new BlogContext();
 
-
-        //BURAYA DÖNECEĞİZ
-       //public PartialViewResult YorumlarListesi(int id)
-       // {
-       //     var yorumlar = db.Yorumlar.Where(i => i.BlogId == id).ToList();
-
-       //     return PartialView(yorumlar.ToList());
-       // }
-
-
         public ActionResult List(int? id,string kategori)
         {
             var bloglar = db.Bloglar.Where(i => i.Onay == true )
@@ -186,6 +176,27 @@ namespace Blog_Sitesi.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+
+        public JsonResult AddCommentMethod(Yorum GelenYorum)
+        {
+            string Mesaj = "Başarılı";
+
+            Yorum YeniYorum = new Yorum
+            {
+
+                Ad = GelenYorum.Ad,
+                Soyad = GelenYorum.Soyad,
+                Mesaj = GelenYorum.Mesaj,
+
+
+            };
+
+            db.Yorumlar.Add(GelenYorum);
+            db.SaveChanges();
+
+            return Json(Mesaj);
         }
     }
 }

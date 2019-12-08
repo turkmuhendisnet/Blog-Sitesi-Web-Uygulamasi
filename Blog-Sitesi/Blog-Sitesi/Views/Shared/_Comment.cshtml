@@ -16,7 +16,7 @@
                     <ul class="media-list">
                         <li class="media">
                             <a class="pull-left" href="#">
-                                <img class="media-object img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg" alt="profile">
+                                <img class="media-object img-circle" src="~/Pictures/Male.jpg" alt="profile">
                             </a>
                             <div class="media-body">
                                 <div class="well well-lg">
@@ -24,40 +24,40 @@
                                     {
                                         <h4 class="media-heading text-uppercase reviews">@item.Ad @item.Soyad</h4>
                                         <ul class="media-date text-uppercase reviews list-inline">
-                                            <li class="dd">@item.YorumTarihi</li>
+                                            <li class="dd">@item.YorumTarihi.ToShortDateString()</li>
 
                                         </ul>
                                         <p class="media-comment">
-                                           @item.Mesaj
+                                            @item.Mesaj
                                         </p>
                                     }
-                                    <a class="btn btn-info btn-circle text-uppercase" href="#" id="reply"><span class="glyphicon glyphicon-share-alt"></span>Cevap</a>
-                                    <a class="btn btn-warning btn-circle text-uppercase" data-toggle="collapse" href="#replyOne"><span class="glyphicon glyphicon-comment"></span> Yorumlar</a>
+                                    @*<a class="btn btn-info btn-circle text-uppercase" href="#" id="reply"><span class="glyphicon glyphicon-share-alt"></span>Cevap</a>
+                                        <a class="btn btn-warning btn-circle text-uppercase" data-toggle="collapse" href="#replyOne"><span class="glyphicon glyphicon-comment"></span> Yorumlar</a>*@
                                 </div>
                             </div>
-                            <div class="collapse" id="replyOne">
-                                <ul class="media-list">
-                                    <li class="media media-replied">
-                                        <a class="pull-left" href="#">
-                                            <img class="media-object img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/ManikRathee/128.jpg" alt="profile">
-                                        </a>
-                                        <div class="media-body">
-                                            <div class="well well-lg">
-                                                <h4 class="media-heading text-uppercase reviews"><span class="glyphicon glyphicon-share-alt"></span> Kemal</h4>
-                                                <ul class="media-date text-uppercase reviews list-inline">
-                                                    <li class="dd">22</li>
-                                                    <li class="mm">09</li>
-                                                    <li class="aaaa">2014</li>
-                                                </ul>
-                                                <p class="media-comment">
-                                                    İyi iş çıkarmışssın
-                                                </p>
-                                                <a class="btn btn-info btn-circle text-uppercase" href="#" id="reply"><span class="glyphicon glyphicon-share-alt"></span> Cevap</a>
+                            @*<div class="collapse" id="replyOne">
+                                    <ul class="media-list">
+                                        <li class="media media-replied">
+                                            <a class="pull-left" href="#">
+                                                <img class="media-object img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/ManikRathee/128.jpg" alt="profile">
+                                            </a>
+                                            <div class="media-body">
+                                                <div class="well well-lg">
+                                                    <h4 class="media-heading text-uppercase reviews"><span class="glyphicon glyphicon-share-alt"></span> Kemal</h4>
+                                                    <ul class="media-date text-uppercase reviews list-inline">
+                                                        <li class="dd">22</li>
+                                                        <li class="mm">09</li>
+                                                        <li class="aaaa">2014</li>
+                                                    </ul>
+                                                    <p class="media-comment">
+                                                        İyi iş çıkarmışssın
+                                                    </p>
+                                                    <a class="btn btn-info btn-circle text-uppercase" href="#" id="reply"><span class="glyphicon glyphicon-share-alt"></span> Cevap</a>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                                        </li>
+                                    </ul>
+                                </div>*@
                         </li>
                     </ul>
                 </div>
@@ -72,7 +72,7 @@
                         <div class="form-group">
                             <label for="surname" class="col-sm-2 control-label">Soyisim</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="soyisim" id="email" placeholder="Soyisim giriniz...">
+                                <input type="text" class="form-control" name="soyisim" id="surname" placeholder="Soyisim giriniz...">
                             </div>
                         </div>
                         <div class="form-group">
@@ -81,37 +81,60 @@
                                 <textarea class="form-control" name="addComment" id="addComment" rows="5"></textarea>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="uploadMedia" class="col-sm-2 control-label">Dosya Yükle</label>
-                            <div class="col-sm-10">
-                                <div class="input-group">
-                                    <div class="input-group-addon">http://</div>
-                                    <input type="text" class="form-control" name="uploadMedia" id="uploadMedia">
+                        @*<div class="form-group">
+                                <label for="uploadMedia" class="col-sm-2 control-label">Dosya Yükle</label>
+                                <div class="col-sm-10">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">http://</div>
+                                        <input type="text" class="form-control" name="uploadMedia" id="uploadMedia">
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
+                            </div>*@
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button class="btn btn-success btn-circle text-uppercase" type="submit" id="submitComment"><span class="glyphicon glyphicon-send"></span> Gönder</button>
+                                <button class="btn btn-success btn-circle text-uppercase" id="submitComment"><span class="glyphicon glyphicon-send"></span> Gönder</button>
                             </div>
                         </div>
                     </form>
-                </div>
-                <div class="tab-pane" id="account-settings">
-                    <form action="#" method="post" class="form-horizontal" id="accountSetForm" role="form">
-
-
-                        <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <button class="btn btn-primary btn-circle text-uppercase" type="submit" id="submit">Kaydet</button>
-                            </div>
-                        </div>
-                    </form>
+                    <div class="alert alert-success" hidden id="#MesajBasarili">
+                        <p>Ekleme işlmi başarısız olmuştur.</p>
+                    </div>
+                    <div class="alert alert-danger" hidden id="#MesajBasarisiz">
+                        <p>Ekleme işlemi başarısız olmuştur.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('#submitComment').click(function () {
+
+            var Yorum = JSON.stringify({
+                'Name': $('#name').val(),
+                'Surname': $('#surname').val(),
+                'Comment': $('#addcomment').val()
+
+            });
+
+            $.ajax({
+
+                url: "/Blog/AddCommentMethod",
+                type: "POST",
+                contentType: "aplication/json",
+                success: function () { $('#MesajBasarili').show(); },
+                error: function () { $('#MesajBasarisiz').show(); },
+                dataType: "JSON",
+                data: Yorum
+            });
+        });
+
+    });
+
+</script>
 
 
 
